@@ -1,0 +1,2530 @@
+:root{
+    --primary-color:#111317;
+    --primary-color-light:#1f2125;
+    --primary-color-extra-light:#35373b;
+    --secondary-color: #FFD700;
+    --secondary-color-dark:#F5F5DC;
+    --white:#ffffff;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--secondary-color-dark);
+}
+
+.button2 {
+    position: absolute;
+    top: -10px;
+    left: 520px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.65rem;
+    padding-inline: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-color-light);
+    gap: 20px;
+    font-weight: bold;
+    border: 3px solid var(--primary-color-extra-light);
+    outline: none;
+    overflow: hidden;
+    font-size: 17px;
+}
+large{
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button2:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button2:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button2hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button2::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+    left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+
+.nav{
+    max-width: var(--max-width);
+    position: absolute;
+    text-decoration: none;
+    top: 45px;
+    left: 550px;
+    }
+    
+    .nav__logo{
+        max-width: 150px;
+    }
+    
+    .nav__links{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 3rem;
+    }
+    
+    .link a {
+        position: relative;
+        padding-bottom: 0.75rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+    
+    .link a::after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        transition: 0.3s;
+    }
+    
+    .link a:hover::after{
+        width: 80%;
+    }
+
+    .header h1{
+        position: absolute;
+        top: 230px;
+        left: 150px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .header h4{
+        position: absolute;
+        top: 300px;
+        left: 200px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+    }
+
+
+    .image{
+        position: absolute;
+        left: 750px;
+        top: 150px;
+        height: 400px;
+}
+
+.shapes{
+    position: absolute;
+    left: 730px;
+    top: 130px;
+    height: 420px;
+    z-index: -1;
+}
+
+button {
+    position: absolute;
+    top: 400px;
+    left: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 60%, #FDFDFD 100%);
+    border-radius: 50px;
+    border: 2px solid gold;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    text-shadow: 0 1px #fff;
+}
+
+button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+button:focus {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.button1 {
+    position: absolute;
+    top: 400px;
+    left: 350px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.6rem;
+    padding-inline: 1.25rem;
+    background-color: var(--secondary-color);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid var(--primary-color-extra-light);
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button1:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.button1:hover .icon {
+    transform: translate(4px);
+}
+
+.button1:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+}
+
+@keyframes fade-in{
+  to {scale: 1; opacity: 1;}
+  }
+
+#about{
+  position: absolute;
+  top: 600px;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+h2{
+  position: absolute;
+  left: 550px;
+  width: 500px;
+  font-size: 30px;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 150px;
+}
+.ab{
+  position: absolute;
+  height: 450px;
+  width: 370px;
+  left: 80px;
+  top: 100px;
+  border-radius: 2rem;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 350px;
+}
+
+.about p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  top: 120px;
+  left: 600px;
+  width: 500px;
+  font-size: 17px;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 350px;
+}
+
+.button5 {
+  position: relative;
+  top: 450px;
+  left: 650px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 1rem;
+  padding-inline: 3.25rem;
+  background-color: var(--secondary-color);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-color-light);
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid var(--primary-color-extra-light);
+  outline: none;
+  overflow: hidden;
+  font-size: 16px;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 100px;
+}
+span{
+  width: 80px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button5:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button5:hover .icon {
+  transform: translate(4px);
+}
+
+.button5:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button5::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+#cards{
+  position: absolute;
+  top: 1350px;
+  left: 50px;
+}
+h3{
+  position: absolute;
+  top: -100px;
+  left: 500px;
+  width: 200px;
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 150px;
+}
+.card {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry    ;
+ }
+ 
+ 
+ .card-details {
+  color: black;
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+ }
+ 
+  .con .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 35%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 1rem;
+  padding: .4rem .5rem;
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: 20px;
+  left: 20%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ .con .text-body {
+  color:  var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  padding-left: 15px;
+}
+ 
+ /*Text*/
+ .text-title {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 1.4rem;
+  z-index: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+ }
+ 
+ .text-title1 {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 1.4rem;
+  z-index: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .con .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+ }
+
+ .wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.im{
+  width: 300px;
+  position: relative;
+}
+
+.wrap .im{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.con{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.4s linear;
+}
+.con:hover{
+  opacity: 1;
+}
+
+ .card1 {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 10px;
+  left: 420px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry    ;
+ }
+ .card1:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: 20px;
+  left: 20%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ .card1:hover .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+ }
+
+.wrapp{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ima{
+  position: absolute;
+  height: 470px;
+  width: 290;
+  top: 0;
+  left: 0px;
+}
+.ima img{
+  width: 99%;
+  height: 71%;
+  position: relative;
+  left: 0%;
+  top: 2%;
+  border-radius: 1rem;
+  display: flex;
+  margin: auto;
+}
+.wrapp .text-title{
+  color: #fff;
+}
+ .card2 {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 10px;
+  left: 770px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry    ;
+ }
+ .card2:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 35%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 15px;
+  width: 200px;
+  padding: .4rem .5rem;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: 50px;
+  left: 35%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ .card2:hover .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+ }
+
+ .card3 {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 400px;
+  left: 70px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry    ;
+ }
+ .card3:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: 20px;
+  left: 20%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ .card3:hover .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+ }
+
+ .imi img{
+  width: 130%;
+  height: 180%;
+  position: relative;
+  left: -18%;
+  top: -32%;
+  border-radius: 1rem;
+  display: flex;
+  margin: auto;
+}
+
+ .card4 {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 400px;
+  left: 420px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry    ;
+ }
+ .card4:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 35%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: -10px;
+  left: 20%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ .card4:hover .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+ }
+ .text-title2 {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 1.4rem;
+  color: var(--white);
+  z-index: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+ }
+
+ .card5 {
+  width: 250px;
+height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 400px;
+  left: 770px;
+  padding: 1.8rem;
+  border: 1px solid var(--primary-color-light);
+  transition: 0.5s ease-out;
+  overflow: visible;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+ }
+ .card5:hover {
+  border-color: gold;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ .card-button4 {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: .1px solid var(--primary-color-light);
+  background-color: gold;
+  color: black;
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  top: 20px;
+  left: 20%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ .card5:hover .card-button4 {
+  transform: translate(-50%, 50%);
+  border-color: var(--primary-color-extra-light);
+  opacity: 1;
+}
+
+#time{
+  position: relative;
+  top: 2100px;
+}
+.timeline{
+  position: relative;
+  top: 10px;
+  max-width: var(--max-width);
+  margin: 80px auto;
+}
+
+.container{
+  padding: 10px 20px;
+  position: relative;
+  width: 40%;
+  opacity: 0;
+  
+}
+
+
+.container:nth-child(1){
+  animation-delay: 1s;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 300px;
+}
+
+.container:nth-child(2){
+  animation-delay: 2s;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 300px;
+}
+.container:nth-child(3){
+  animation-delay: 3s;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 300px;
+}
+.container:nth-child(4){
+  animation-delay: 4s;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 300px;
+}
+.container:nth-child(5){
+  animation-delay: 5s;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 250px;
+}
+
+.text-box{
+  padding: 20px 30px;
+  background: var(--white);
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.left-con{
+  left: 8%;
+}
+.right-con{
+  left: 50%;
+}
+
+.container img{
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -5px;
+  top: 32px;
+  z-index: 10;
+}
+.right-con img{
+  left: -5px;
+}
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: var(--white);
+  top: 0;
+  left: 51.5%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+
+.text-box h4{
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contact-left{
+  position: absolute;
+  top: 2950px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-inputs{
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #000;
+  border-radius: 50px;
+}
+.contact-left textarea{
+  height: 150px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus{
+  border:2px solid var(--secondary-color);
+}
+.contact-inputs::placeholder{
+  color: #a9a9a9;
+}
+.contact-left button{
+  position: absolute;
+  top: 320px;
+  left: 0px;
+}
+h5{
+  position: absolute;
+  top: -50px;
+  left: 550px;
+  font-size: 23px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scale: .8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 250px;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  position: absolute;
+  display: none;
+  top: 150px;
+  left: 450px;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: gold;
+  --af-white: gold;
+  --ch-white: gold;
+}
+
+footer .demo {
+  position: absolute;
+  bottom: 10px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+footer .demo a {
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: 100;
+  border-bottom: 1px solid #000;
+}
+
+.circle {
+  display: block;
+  position: relative;
+  left: -20px;
+  top: -95px;
+  padding: 0;
+  z-index: 98;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: gold;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.circle:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.circle:hover {
+  cursor: pointer;
+  background-color: var(--af-white);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.circle .svg {
+  position: absolute;
+  color: var(--black);
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  transform: rotate(180deg);
+}
+
+.circle svg image {
+  filter: brightness(50%);
+}
+
+.sub-circle {
+  z-index: 0;
+  position: absolute;
+  height: 45px;
+  width: 60px;
+  overflow: hidden;
+  top: -45px;
+  left: 0;
+  border-radius: 40%;
+  transition: 0.3s;
+  transform: scale(0.6);
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.sub-circle label {
+  background-color: var(--af-white);
+  display: block;
+  color: var(--secondary-color);
+  width: 90%;
+  height: 90%;
+  line-height: 40px;
+  transition: .5s;
+}
+
+.sub-circle label:hover {
+  cursor: pointer;
+  background-color: var(--ch-white);
+}
+
+.subs {
+  left: -20px;
+  top: -50px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  z-index: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hidden-sub-trigger {
+  display: none;
+}
+
+.hidden-sub-trigger:checked ~ label {
+  background-color: var(--white);
+}
+
+.hidden-trigger {
+  display: none;
+}
+
+.hidden-trigger:checked ~ .circle {
+  transform: scale(0.9);
+  cursor: pointer;
+  background-color: var(--white);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hidden-trigger:checked ~ .circle .svg {
+  transform: rotate(45deg);
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(1) {
+  transform: translate(-300px, 0px) scale(1);
+  opacity: 1;
+  transition: 0.1s;
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(2) {
+  transform: translate(-230px, 0px) scale(1);
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(3) {
+  transform: translate(-160px, 0px) scale(1);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(4) {
+  transform: translate(-90px, 0px) scale(1);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(5) {
+  transform: translate(-20px, 0px) scale(1);
+  opacity: 1;
+  transition: 0.5s;
+}
+.contact{
+  position: absolute;
+  top: 200px;
+}
+big{
+  position: absolute;
+  top: 2800px;
+  width: 300px;
+  left: 550px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+span{
+    position: absolute;
+  top: 0px;
+  width: 300px;
+  left: 0px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.tag{
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  left: 80px;
+  padding-top: 40px;
+  width: 400px;
+}
+
+#icons{
+  position: absolute;
+  top: 2900px;
+  left: 850px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.par{
+  position: absolute;
+  font-size: 17px;
+  font-weight: 300;
+  left: -100px;
+  top: 50px;
+width: 500px;
+}
+
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  position: absolute;
+  top: 250px;
+  left: -80px;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 20%;
+  transform: translateX(-50%);
+  color: #fff;
+  width: 70px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  color: #4d4d4d;
+  background-color: #ffff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+.example-2 .icon-content a[data-social="spotify"] .filled,
+.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+  background-color: #1db954;
+}
+.example-2 .icon-content a[data-social="pinterest"] .filled,
+.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+.example-2 .icon-content a[data-social="dribbble"] .filled,
+.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
+  background-color: #ea4c89;
+}
+.example-2 .icon-content a[data-social="telegram"] .filled,
+.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #cc39a4;
+}
+
+.footer{
+  position: absolute;
+  background-color: white;
+  margin: 20px;
+  height: 400px;
+  left: 10px;
+  width: 1220px;
+  top: 3400px;
+}
+.text{
+  position: absolute;
+  top: 2900px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  left: 150px;
+  width: 300px;
+}
+.footer-links{
+  position: absolute;
+  top: 80px;
+  width: 300px;
+  border-radius: 1rem;
+  left: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.foot{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 28px;
+  color: var(--secondary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.txt{
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  left: 20px;
+  color: var(--black);
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lead{
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.footer-divs{
+  position: absolute;
+  top: 100px;
+  border-radius: 1rem;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main {
+  position: absolute;
+  top: 3500px;
+  left: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card11 {
+  width: 90px;
+  height: 90px;
+  left: 20px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card22 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card33 {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+}
+
+.card44 {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.discord {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card11:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #1db954;
+}
+
+.card11:hover .instagram {
+  fill: white;
+}
+
+.card22:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03A9F4;
+}
+
+.card22:hover .twitter {
+  fill: white;
+}
+
+.card33:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card33:hover .github {
+  fill: white;
+}
+
+.card44:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card44:hover .discord {
+  fill: white;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .nav{
+    display: none;
+  }
+
+  .contact-inputs{
+    width: 380px;
+    height: 70px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #000;
+    border-radius: 50px;
+  }
+  .contact-left textarea{
+    height: 250px;
+    padding-top: 15px;
+    border-radius: 20px;
+  }
+  .contact-left button{
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    top: 400px;
+    left: 20px;
+  }
+  .contact-left{
+    position: absolute;
+    left: 100px;
+  }
+
+  span{
+    position: absolute;
+  top: -50px;
+  width: 300px;
+  left: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+  big{
+    position: absolute;
+    top: 5300px;
+    left: 100px;
+    font-size: 40px;
+  }
+  #icons{
+    position: absolute;
+    top: 5430px;
+    left: 80px;
+}
+
+.par{
+position: absolute;
+width: 350px;
+top: 0px;
+left: -70px;
+font-size: 21px;
+}
+  #contact-container{
+  position: absolute;
+  top: 2850px;
+  left: -100px;
+}
+  .wrapper {
+    position: absolute;
+    display: block;
+    top: 150px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+  }
+
+  .hidden-trigger:checked ~ .subs a:nth-of-type(1) {
+    transform: translate(-550%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.1s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(2) {
+    transform: translate(-420%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.2s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(3) {
+    transform: translate(-300%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(4) {
+    transform: translate(-170%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(5) {
+    transform: translate(-40%,10px) scale(1);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .header h1{
+    position: absolute;
+    top: 18%;
+    left: 15px;
+    width: 500px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header h4{
+    position: absolute;
+    top: 24%;
+    left: 15px;
+    width: 350px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.image{
+    position: absolute;
+    left: 10px;
+    top: 34%;
+    height: 450px;
+}
+
+.shapes{
+position: absolute;
+left: -5%;
+top: 25%;
+height: 400px;
+z-index: -1;
+}
+.button2{
+  display: none;
+}
+
+button {
+  position: absolute;
+  top: 89%;
+  left: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button1 {
+  position: absolute;
+  top: 101%;
+  left: 20%;
+  padding-block: 1.4rem;
+  padding-inline: 1.6rem;
+  gap: 10px;
+  font-size: 23px;
+}
+
+h2{
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  width: 500px;
+  font-size: 40px;
+}
+
+.ab{
+  position: absolute;
+  height: 390px;
+  width: 330px;
+  left: 20px;
+  top: 400px;
+  border-radius: 2rem;
+}
+.about p{
+  position: absolute;
+  top: 820px;
+  left: 10px;
+  color: #000;
+  width: 350px;
+  font-size: px;
+}
+
+.button5 {
+  position: relative;
+  top: 1250px;
+  left: 50px;
+  padding-block: 1rem;
+  padding-inline: 3.25rem;
+  font-size: 16px;
+}
+h3{
+  position: absolute;
+  top: 650px;
+  left: 30px;
+  width: 250px;
+  font-size: 35px;
+
+}
+
+.card {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 750px;
+  left: -15px;
+  padding: 2rem;
+}
+.card1 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1150px;
+  left: -15px;
+  padding: 2rem;
+}
+.card2 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1550px;
+  left: -15px;
+  padding: 2rem;
+}
+.card3 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1950px;
+  left: -15px;
+  padding: 2rem;
+}
+.card4 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 2350px;
+  left: -15px;
+  padding: 2rem;
+}
+.card5 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 2750px;
+  left: -15px;
+  padding: 2rem;
+}
+#time{
+  position: relative;
+  top: 4500px;
+}
+.timeline{
+margin: 50px auto;
+}
+.timeline::after{
+left: 31px;
+}
+.container{
+  width: 80%;
+}
+.imm{
+  left: -10px;
+}
+.right-con{
+  left: 30px;
+}
+.text-box{
+  font-size: 13px;
+}
+.text-box h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+h5{
+  position: absolute;
+  left: 120px;
+}
+.time5{
+  position: absolute;
+  top: -70px;
+  left: 80px;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.form-container {
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#FFD700, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 40px 45px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  position: absolute;
+  top: 5400px;
+  left: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.footer{
+  position: absolute;
+  top: 6250px;
+  left: -20px;
+  width: 480px;
+  height: 1200px;
+}
+.footer-divs{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  font-size: 20px;
+}
+.lead{
+  font-size: 35px;
+  position: absolute;
+  top: -90px;
+  left: 50px;
+}
+.footer-links{
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  font-size: 20px;
+}
+.main{
+  position: absolute;
+  top: 7200px;
+  left: 100px;
+}
+.main .lead{
+  position: absolute;
+  left: -10px;
+  width: 300px;
+}
+}
+@media (min-width: 376px) and (max-width: 640px) {
+  .nav{
+    display: none;
+  }
+
+  .contact-inputs{
+    width: 380px;
+    height: 70px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #000;
+    border-radius: 50px;
+  }
+  .contact-left textarea{
+    height: 250px;
+    padding-top: 15px;
+    border-radius: 20px;
+  }
+  .contact-left button{
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    top: 450px;
+    left: 20px;
+  }
+  .contact-left{
+    position: absolute;
+    left: 100px;
+  }
+
+  span{
+    position: absolute;
+  top: -50px;
+  width: 300px;
+  left: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+  big{
+    position: absolute;
+    top: 5080px;
+    left: 100px;
+    font-size: 40px;
+  }
+  #icons{
+    position: absolute;
+    top: 5180px;
+    left: 80px;
+}
+
+.par{
+position: absolute;
+width: 350px;
+top: -0px;
+left: -70px;
+font-size: 21px;
+}
+  #contact-container{
+  position: absolute;
+  top: 2650px;
+  left: -100px;
+}
+  .wrapper {
+    position: absolute;
+    display: block;
+    top: 150px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+  }
+
+  .hidden-trigger:checked ~ .subs a:nth-of-type(1) {
+    transform: translate(-550%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.1s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(2) {
+    transform: translate(-420%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.2s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(3) {
+    transform: translate(-300%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(4) {
+    transform: translate(-170%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(5) {
+    transform: translate(-40%,10px) scale(1);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .header h1{
+    position: absolute;
+    top: 18%;
+    left: 20px;
+    width: 500px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header h4{
+    position: absolute;
+    top: 24%;
+    left: 15px;
+    width: 350px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.image{
+    position: absolute;
+    left: 10px;
+    top: 34%;
+    height: 450px;
+}
+
+.shapes{
+position: absolute;
+left: -5%;
+top: 25%;
+height: 400px;
+z-index: -1;
+}
+.button2{
+  display: none;
+}
+
+button {
+  position: absolute;
+  top: 90%;
+  left: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button1 {
+  position: absolute;
+  top: 102%;
+  left: 20%;
+  padding-block: 1.4rem;
+  padding-inline: 1.6rem;
+  gap: 10px;
+  font-size: 23px;
+}
+
+h2{
+  position: absolute;
+  top: 440px;
+  left: 100px;
+  width: 500px;
+  font-size: 40px;
+}
+
+.ab{
+  position: absolute;
+  height: 390px;
+  width: 330px;
+  left: 20px;
+  top: 500px;
+  border-radius: 2rem;
+}
+.about p{
+  position: absolute;
+  top: 900px;
+  left: 10px;
+  color: #000;
+  width: 350px;
+}
+
+.button5 {
+  position: relative;
+  top: 1250px;
+  left: 50px;
+  padding-block: 1rem;
+  padding-inline: 3.25rem;
+  font-size: 16px;
+}
+h3{
+  position: absolute;
+  top: 650px;
+  left: 30px;
+  width: 250px;
+  font-size: 35px;
+
+}
+
+.card {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 750px;
+  left: -15px;
+  padding: 2rem;
+}
+.card1 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1150px;
+  left: -15px;
+  padding: 2rem;
+}
+.card2 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1550px;
+  left: -15px;
+  padding: 2rem;
+}
+.card3 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 1950px;
+  left: -15px;
+  padding: 2rem;
+}
+.card4 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 2350px;
+  left: -15px;
+  padding: 2rem;
+}
+.card5 {
+  width: 250px;
+height: 250px;
+  position: absolute;
+  top: 2750px;
+  left: -15px;
+  padding: 2rem;
+}
+#time{
+  position: relative;
+  top: 4500px;
+}
+.timeline{
+margin: 50px auto;
+}
+.timeline::after{
+left: 31px;
+}
+.container{
+  width: 80%;
+}
+.imm{
+  left: -10px;
+}
+.right-con{
+  left: 30px;
+}
+.text-box{
+  font-size: 13px;
+}
+.text-box h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+h5{
+  position: absolute;
+  left: 120px;
+}
+.time5{
+  position: absolute;
+  top: -70px;
+  left: 80px;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.form-container {
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#FFD700, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 40px 45px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  position: absolute;
+  top: 5400px;
+  left: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.footer{
+  position: absolute;
+  top: 6250px;
+  left: -20px;
+  width: 480px;
+  height: 1200px;
+}
+.footer-divs{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  font-size: 20px;
+}
+.lead{
+  font-size: 35px;
+  position: absolute;
+  top: -90px;
+  left: 50px;
+}
+.footer-links{
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  font-size: 20px;
+}
+.main{
+  position: absolute;
+  top: 7200px;
+  left: 100px;
+}
+.main .lead{
+  position: absolute;
+  left: -10px;
+  width: 300px;
+}
+}
+@media (max-width: 1024){
+  .nav{
+    display: block;
+  }
+
+  .contact-inputs{
+    width: 430px;
+    height: 70px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #000;
+    border-radius: 50px;
+  }
+  .contact-left textarea{
+    height: 250px;
+    padding-top: 15px;
+    border-radius: 20px;
+  }
+  .contact-left button{
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    top: 400px;
+    left: 20px;
+  }
+  .contact-left{
+    position: absolute;
+    left: 120px;
+  }
+
+  span{
+    position: absolute;
+  top: -20px;
+  width: 300px;
+  left: -80px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+  big{
+    position: absolute;
+    top: 5260px;
+    left: 130px;
+    font-size: 40px;
+  }
+  #icons{
+    position: absolute;
+    top: 5350px;
+    left: 150px;
+}
+
+.par{
+position: absolute;
+width: 430px;
+top: 40px;
+left: -120px;
+font-size: 21px;
+}
+  #contact-container{
+  position: absolute;
+  top: 2850px;
+  left: -100px;
+}
+  .wrapper {
+    position: absolute;
+    display: block;
+    top: 150px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+  }
+
+  .hidden-trigger:checked ~ .subs a:nth-of-type(1) {
+    transform: translate(-690%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.1s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(2) {
+    transform: translate(-550%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.2s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(3) {
+    transform: translate(-400%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(4) {
+    transform: translate(-250%, 10px) scale(1);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .hidden-trigger:checked ~ .subs a:nth-of-type(5) {
+    transform: translate(-100%,10px) scale(1);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .header h1{
+    position: absolute;
+    top: 18%;
+    left: 20px;
+    width: 500px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+}
+
+.header h4{
+    position: absolute;
+    top: 24%;
+    left: 5%;
+    width: 420px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.image{
+    position: absolute;
+    left: 15px;
+    top: 34%;
+    height: 550px;
+}
+
+.shapes{
+position: absolute;
+left: -5%;
+top: 25%;
+height: 500px;
+z-index: -1;
+}
+.button2{
+  display: none;
+}
+
+button {
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 90px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button1 {
+  position: absolute;
+  top: 95%;
+  left: 25%;
+  padding-block: 1.6rem;
+  padding-inline: 2.5rem;
+  gap: 10px;
+  font-size: 23px;
+}
+
+h2{
+  position: absolute;
+  top: 500px;
+  left: 130px;
+  width: 500px;
+  font-size: 40px;
+}
+
+.ab{
+  position: absolute;
+  height: 390px;
+  width: 330px;
+  left: 70px;
+  top: 580px;
+  border-radius: 2rem;
+}
+.about p{
+  position: absolute;
+  top: 990px;
+  left: 30px;
+  color: #000;
+  width: 450px;
+  font-size: 21px;
+}
+
+.button5 {
+  position: relative;
+  top: 1300px;
+  left: 100px;
+  padding-block: 1rem;
+  padding-inline: 3.25rem;
+  font-size: 16px;
+}
+h3{
+  position: absolute;
+  top: 650px;
+  left: 80px;
+  width: 250px;
+  font-size: 35px;
+
+}
+
+.card {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 750px;
+  left: 25px;
+  padding: 2rem;
+}
+.card1 {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 1150px;
+  left: 25px;
+  padding: 2rem;
+}
+.card2 {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 1550px;
+  left: 25px;
+  padding: 2rem;
+}
+.card3 {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 1950px;
+  left: 25px;
+  padding: 2rem;
+}
+.card4 {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 2350px;
+  left: 25px;
+  padding: 2rem;
+}
+.card5 {
+  width: 300px;
+height: 280px;
+  position: absolute;
+  top: 2750px;
+  left: 25px;
+  padding: 2rem;
+}
+#time{
+  position: relative;
+  top: 4500px;
+}
+h5{
+  position: absolute;
+  top: -70px;
+  left: 80px;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.form-container {
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#FFD700, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 40px 45px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  position: absolute;
+  top: 5400px;
+  left: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.footer{
+  position: absolute;
+  top: 6250px;
+  left: -20px;
+  width: 480px;
+  height: 1200px;
+}
+.footer-divs{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  font-size: 20px;
+}
+.lead{
+  font-size: 35px;
+  position: absolute;
+  top: -90px;
+  left: 50px;
+}
+.footer-links{
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  font-size: 20px;
+}
+.main{
+  position: absolute;
+  top: 7200px;
+  left: 100px;
+}
+.main .lead{
+  position: absolute;
+  left: -10px;
+  width: 300px;
+}}
+
